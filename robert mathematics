@@ -1,0 +1,17 @@
+def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a % b)
+
+def main():
+    a, b = map(int, input("Enter the numbers: ").split())
+    g = gcd(a, b)
+    prod = a * b
+    s = g
+    if prod % s == 0:
+        print("YEAH")
+    else:
+        print("NAH")
+
+if __name__ == '__main__':
+    main()
